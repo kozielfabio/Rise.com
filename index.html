@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RISE, Glow Up completo em ordem prática</title>
-<meta name="description" content="RISE é o sistema de glow up que organiza rosto, pele, cabelo, shape, alimentação, postura e presença. Sem dica solta. Sem achismo. Acesso por R$37.">
+<title>RISE — Glow Up completo em ordem prática</title>
+<meta name="description" content="RISE organiza rosto, pele, cabelo, shape, alimentação, postura e presença numa sequência prática. Sem dica solta. Acesso por R$37.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -38,7 +38,6 @@
  a{color:inherit;text-decoration:none;}
  section{position:relative;padding-block:clamp(68px,8vw,104px);}
  .wrap{max-width:1000px;margin-inline:auto;padding-inline:clamp(20px,4vw,40px);position:relative;z-index:2;}
-
  .eyebrow{
   font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-soft);
  }
@@ -46,7 +45,6 @@
   font-weight:700;font-size:clamp(1.65rem,3.6vw,2.45rem);letter-spacing:-.035em;line-height:1.12;color:var(--cream);
  }
  .lede{max-width:520px;color:var(--text-muted);font-size:15.5px;line-height:1.7;}
-
  .btn{
   display:inline-flex;align-items:center;justify-content:center;gap:10px;
   min-height:52px;padding:0 26px;
@@ -63,16 +61,12 @@
  }
  .btn-blue:hover{background:linear-gradient(135deg,#3562c4,var(--accent-soft));box-shadow:0 14px 36px rgba(91,141,239,.35);}
  .section-cta{display:flex;justify-content:center;margin-top:36px;}
-
- /* NAV */
  .navbar{position:fixed;inset-inline:0;top:0;z-index:50;background:transparent;transition:background .3s,border-color .3s,backdrop-filter .3s;}
  .navbar.scrolled{background:rgba(11,18,32,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);}
  .navbar__inner{max-width:1000px;margin-inline:auto;padding:14px clamp(20px,4vw,40px);display:flex;align-items:center;justify-content:space-between;}
  .navbar__brand{font-size:13px;font-weight:800;letter-spacing:.18em;color:var(--cream);}
  .navbar__cta{font-size:12px;font-weight:600;color:var(--cream-muted);padding:8px 14px;border:1px solid var(--line);border-radius:999px;transition:color .2s,border-color .2s,background .2s;}
  .navbar__cta:hover{color:var(--cream);border-color:rgba(243,238,231,.3);background:rgba(243,238,231,.05);}
-
- /* HERO */
  .hero{
   min-height:100svh;display:flex;align-items:center;justify-content:center;
   text-align:center;padding:120px 0 72px;position:relative;
@@ -100,20 +94,14 @@
  .hero-cta{margin-top:32px;display:flex;flex-direction:column;align-items:center;gap:12px;}
  .hero-price{font-size:13px;color:var(--text-muted);}
  .hero-price strong{color:var(--cream);font-weight:700;}
-
- /* INTRO */
  .intro{background:var(--bg-soft);text-align:center;}
  .intro .section-title{margin:12px auto 0;max-width:640px;}
  .intro .lede{margin:16px auto 0;text-align:center;}
-
- /* PROBLEM */
  .problem{background:var(--bg);}
  .problem__head{margin-bottom:24px;max-width:580px;}
  .problem-body{max-width:540px;display:flex;flex-direction:column;gap:13px;}
  .problem-body p{font-size:15.5px;line-height:1.7;color:var(--text-muted);}
  .problem-body p strong{color:var(--cream);font-weight:600;}
-
- /* PROCESS */
  .process{background:var(--bg-soft);}
  .process__head{text-align:center;margin-bottom:36px;}
  .process__head .section-title{margin-top:10px;}
@@ -126,8 +114,6 @@
  .process-card__num{font-size:12px;font-weight:700;color:var(--accent-soft);margin-bottom:10px;}
  .process-card__title{font-size:14.5px;font-weight:700;margin-bottom:6px;color:var(--cream);}
  .process-card__text{font-size:13px;line-height:1.55;color:var(--text-muted);}
-
- /* MODULES */
  .modules{background:var(--bg);}
  .modules__head{margin-bottom:32px;text-align:center;}
  .modules__head .section-title{margin-top:10px;}
@@ -139,8 +125,6 @@
  .module-row__num{font-size:12px;font-weight:700;color:var(--accent-soft);padding-top:2px;}
  .module-row__title{font-size:14.5px;font-weight:700;margin-bottom:4px;color:var(--cream);}
  .module-row__text{font-size:13.5px;line-height:1.55;color:var(--text-muted);}
-
- /* OFFER */
  .offer{background:var(--bg-soft);}
  .offer__head{text-align:center;margin-bottom:28px;}
  .offer__head .section-title{margin-top:10px;}
@@ -158,8 +142,6 @@
  .offer-list li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;margin-top:6px;}
  .offer-note{margin-top:18px;font-size:13px;line-height:1.55;color:var(--text-muted);}
  .offer-box .btn{margin-top:26px;width:100%;}
-
- /* GUARANTEE */
  .guarantee{background:var(--bg);}
  .guarantee-inner{max-width:540px;margin-inline:auto;text-align:center;}
  .guarantee-inner .section-title{margin-top:10px;}
@@ -170,8 +152,6 @@
   border:1px solid var(--line);border-radius:999px;font-size:13px;color:var(--cream-muted);
  }
  .guarantee-badge strong{color:var(--cream);}
-
- /* FAQ */
  .faq{background:var(--bg-soft);}
  .faq__head{text-align:center;max-width:480px;margin-inline:auto;}
  .faq__head .section-title{margin-top:10px;}
@@ -188,8 +168,6 @@
  .faq-item.is-open .faq-item__panel{grid-template-rows:1fr;}
  .faq-item__panel-inner{overflow:hidden;}
  .faq-item__answer{padding:0 2px 16px;font-size:14px;line-height:1.65;color:var(--text-muted);}
-
- /* CTA FINAL */
  .cta-final{
   background:radial-gradient(ellipse 70% 55% at 50% 100%,rgba(91,141,239,.12),transparent 55%),var(--bg);
   text-align:center;
@@ -199,7 +177,6 @@
  .cta-final__cta{margin-top:28px;}
  .cta-final__price{margin-top:12px;font-size:13px;color:var(--text-muted);}
  .cta-final__price strong{color:var(--cream);}
-
  footer{background:var(--bg);color:var(--text-muted);padding:28px 0;font-size:12px;border-top:1px solid var(--line);}
  footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;}
  footer a:hover{color:var(--cream-muted);}
@@ -208,15 +185,13 @@
 </style>
 </head>
 <body>
-
 <nav class="navbar" id="navbar">
  <div class="navbar__inner">
   <a href="#" class="navbar__brand">RISE</a>
-  <a href="#oferta" class="navbar__cta">Quero meu glow up</a>
+  <a href="https://pay.cakto.com.br/r7f962r_1123402" class="navbar__cta" target="_blank" rel="noopener">Quero meu glow up</a>
  </div>
 </nav>
 
-<!-- HERO -->
 <header class="hero">
  <div class="wrap hero-content">
   <div class="hero-badge">Glow up com ordem, sem dica solta</div>
@@ -229,13 +204,12 @@
    Rosto, pele, cabelo, shape, postura, alimentação e presença, juntos, na sequência certa. Feito pra quem já tem informação demais e plano de menos.
   </p>
   <div class="hero-cta">
-   <a href="#oferta" class="btn btn-blue">Quero meu glow up</a>
+   <a href="https://pay.cakto.com.br/r7f962r_1123402" class="btn btn-blue" target="_blank" rel="noopener">Quero meu glow up</a>
    <p class="hero-price">Acesso completo · <strong>R$ 37</strong></p>
   </div>
  </div>
 </header>
 
-<!-- BIG IDEA -->
 <section class="intro">
  <div class="wrap">
   <div class="eyebrow">A ideia</div>
@@ -246,7 +220,6 @@
  </div>
 </section>
 
-<!-- PROBLEM -->
 <section class="problem">
  <div class="wrap">
   <div class="problem__head">
@@ -257,12 +230,14 @@
    <p>Já salvou dica. Já comprou produto. Já abandonou na terceira semana.</p>
    <p>Já se comparou com quem evoluiu e voltou pra casa pior.</p>
    <p><strong>O problema não é falta de esforço. É falta de ordem.</strong></p>
-   <p>O RISE junta o que realmente importa pro glow up, aparência, físico e presença, e coloca numa sequência que dá pra seguir.</p>
+   <p>O RISE junta o que realmente importa pro glow up: aparência, físico e presença. E coloca tudo numa sequência que dá pra seguir.</p>
+  </div>
+  <div class="section-cta">
+   <a href="https://pay.cakto.com.br/r7f962r_1123402" class="btn btn-blue" target="_blank" rel="noopener">Quero organizar meu glow up</a>
   </div>
  </div>
 </section>
 
-<!-- PROCESS -->
 <section class="process">
  <div class="wrap">
   <div class="process__head">
@@ -295,7 +270,6 @@
  </div>
 </section>
 
-<!-- MODULES -->
 <section class="modules" id="conteudo">
  <div class="wrap">
   <div class="modules__head">
@@ -361,12 +335,11 @@
    </div>
   </div>
   <div class="section-cta">
-   <a href="#oferta" class="btn btn-blue">Quero acessar os módulos</a>
+   <a href="https://pay.cakto.com.br/r7f962r_1123402" class="btn btn-blue" target="_blank" rel="noopener">Quero acessar os módulos</a>
   </div>
  </div>
 </section>
 
-<!-- OFFER -->
 <section class="offer" id="oferta">
  <div class="wrap">
   <div class="offer__head">
@@ -395,12 +368,11 @@
     Menos que uma saída no fim de semana.<br>
     Mais barato que continuar comprando coisa sem saber se precisa mesmo.
    </p>
-   <a href="#" class="btn btn-blue">Quero garantir meu acesso</a>
+   <a href="https://pay.cakto.com.br/r7f962r_1123402" class="btn btn-blue" target="_blank" rel="noopener">Quero garantir meu acesso</a>
   </div>
  </div>
 </section>
 
-<!-- GUARANTEE -->
 <section class="guarantee">
  <div class="wrap">
   <div class="guarantee-inner">
@@ -410,11 +382,13 @@
     Entra, vê a estrutura e aplica o que fizer sentido. Se em 7 dias achar que não é pra você, pede o reembolso nos termos da garantia.
    </p>
    <div class="guarantee-badge"><strong>7 dias</strong> · sem teatro</div>
+   <div style="margin-top:28px;">
+    <a href="https://pay.cakto.com.br/r7f962r_1123402" class="btn btn-blue" target="_blank" rel="noopener">Quero entrar com garantia</a>
+   </div>
   </div>
  </div>
 </section>
 
-<!-- FAQ -->
 <section class="faq" id="faq">
  <div class="wrap">
   <div class="faq__head">
@@ -422,16 +396,18 @@
    <h2 class="section-title">O que costuma travar a decisão.</h2>
   </div>
   <div class="faq-list" id="faqList"></div>
+  <div class="section-cta">
+   <a href="https://pay.cakto.com.br/r7f962r_1123402" class="btn btn-blue" target="_blank" rel="noopener">Quero meu glow up</a>
+  </div>
  </div>
 </section>
 
-<!-- CTA FINAL -->
 <section class="cta-final">
  <div class="wrap">
   <h2 class="section-title">Pare de colecionar dica.<br>Comece a organizar seu glow up.</h2>
   <p class="lede">O RISE é pra quem cansou de informação solta e quer uma sequência que dá pra seguir de verdade.</p>
   <div class="cta-final__cta">
-   <a href="#oferta" class="btn btn-blue">Quero meu glow up · R$ 37</a>
+   <a href="https://pay.cakto.com.br/r7f962r_1123402" class="btn btn-blue" target="_blank" rel="noopener">Quero meu glow up · R$ 37</a>
   </div>
   <p class="cta-final__price">Acesso completo · <strong>R$ 37</strong> · Garantia de 7 dias</p>
  </div>
@@ -452,7 +428,6 @@
  window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 40);
  }, {passive:true});
-
  const faqs = [
   {q:"Como acesso depois da compra?",a:"Quando o pagamento confirmar, o acesso vai pro mesmo e-mail da compra. Usa um e-mail que você realmente abre."},
   {q:"O que está incluso?",a:"As oito frentes: estrutura e rosto, pele, postura, shape, alimentação, cabelo e visual, comunicação e confiança."},
@@ -465,7 +440,6 @@
   {q:"E se eu não gostar?",a:"Você tem 7 dias. Se achar que não é pra você, pede o reembolso nos termos da garantia."},
   {q:"Não recebi o acesso. O que faço?",a:"Olha a caixa de spam e promoções. Se não achar, usa o suporte que aparece depois da compra."}
  ];
-
  const faqList = document.getElementById('faqList');
  faqList.innerHTML = faqs.map((f) => `
   <div class="faq-item">
@@ -479,7 +453,6 @@
     </div>
    </div>
   </div>`).join('');
-
  faqList.addEventListener('click', (e) => {
   const trigger = e.target.closest('.faq-item__trigger');
   if (!trigger) return;
