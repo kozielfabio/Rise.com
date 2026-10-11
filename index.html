@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>RISE — Pare de ser invisível</title>
+<title>RISE | Pare de ser invisível</title>
+<script>document.documentElement.className="js"</script>
 <meta name="description" content="O sistema prático que organiza rosto, shape, postura e presença. Feito pra homem que cansou de passar despercebido.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -100,11 +101,16 @@ section{padding-block:clamp(48px,7vw,84px)}
 .old{font-size:15px;color:var(--mut);text-decoration:line-through}
 .price{font-size:clamp(3.4rem,16vw,4.4rem);font-weight:800;line-height:1;letter-spacing:-.03em}
 .box .d{margin-top:12px;font-size:15px;line-height:1.6;color:var(--mut)}
-.box ul{margin:20px auto 0;text-align:left;max-width:320px;display:flex;flex-direction:column;gap:9px}
-.box li{display:flex;gap:10px;font-size:14px;line-height:1.4;color:var(--cream2);list-style:none}
-.box li:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--ac);flex:none;margin-top:6px}
+.stack{margin:22px 0 0;text-align:left;display:flex;flex-direction:column}
+.stack li{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;padding:12px 0;border-bottom:1px solid var(--line);list-style:none;font-size:14.5px;font-weight:600;line-height:1.35;color:var(--cream)}
+.stack small{display:block;margin-top:2px;font-size:12.5px;font-weight:400;color:var(--mut)}
+.stack s{flex:none;font-size:14px;font-weight:600;color:var(--mut)}
+.total{display:flex;justify-content:space-between;padding:14px 0 0;font-size:14px;font-weight:700;color:var(--cream2)}
+.total s{color:var(--mut)}
+.today{margin-top:22px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ac2)}
 .note{margin-top:16px;font-size:13.5px;line-height:1.55;color:var(--mut)}
 .box .btn{margin-top:22px;max-width:none}
+.box .price{margin-top:6px}
 .guar{background:var(--soft)}
 .guar .title span{color:var(--ac2)}
 .pill{display:inline-block;margin-top:16px;padding:9px 16px;border:1px solid var(--line);border-radius:999px;font-size:13px;color:var(--mut)}
@@ -129,7 +135,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .sticky{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:60;min-height:52px;border-radius:999px;background:linear-gradient(135deg,var(--ac3),var(--ac));color:#fff;font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.45);transform:translateY(140%);transition:transform .3s}
 .sticky.show{transform:none}
 @media(min-width:760px){.sticky{display:none}footer{padding-bottom:26px}}
-@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.js .rv.in{opacity:1;transform:none}
+.btn,.arr,.pill{transition:transform .25s cubic-bezier(.16,1,.3,1),opacity .25s}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.js .rv{opacity:1;transform:none}}
 </style>
 </head>
 <body>
@@ -138,7 +147,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
 <header class="hero" id="topo">
   <div class="wrap">
-    <div class="badge">Sistema completo · ordem prática</div>
+    <div class="badge">Sistema completo e prático</div>
     <div class="prod">RISE</div>
     <h1>Pare de passar despercebido.<br><span>Comece a ser visto de verdade.</span></h1>
     <p>Homem que melhora aparência, shape e presença deixa de se esconder. Ganha voz, respeito e espaço. O RISE organiza tudo isso numa sequência que você consegue seguir.</p>
@@ -154,30 +163,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   </div>
 
   <div class="car" id="car" aria-label="Antes e depois">
-    <article class="ba">
-      <div class="pics">
-        <figure><img src="src/img/antesporto.jpeg" alt="Antes: cabelo bagunçado e pele irregular" loading="lazy" decoding="async"><span class="tag">Antes</span></figure>
-        <figure><img class="v" src="src/img/depoisporto.jpeg" alt="Depois: corte alinhado e pele mais uniforme" loading="lazy" decoding="async"><span class="tag on">Depois</span></figure>
-      </div>
-      <div class="info">
-        <h3>Pele + cabelo + sobrancelha</h3>
-        <ul class="chips"><li>Corte de cabelo</li><li>Pele mais uniforme</li><li>Sobrancelha alinhada</li></ul>
-        <p><b>Antes:</b> cabelo sem forma, pele com marcas e oleosidade, sobrancelha sem desenho. <b>Depois:</b> franja alinhada, pele mais limpa e rosto com mais harmonia.</p>
-      </div>
-    </article>
-
-    <article class="ba">
-      <div class="pics">
-        <figure><img src="src/img/antesporto2.jpeg" alt="Antes: cabelo volumoso e pele com marcas" loading="lazy" decoding="async"><span class="tag">Antes</span></figure>
-        <figure><img src="src/img/depoisporto2.jpeg" alt="Depois: cabelo modelado e rosto mais definido" loading="lazy" decoding="async"><span class="tag on">Depois</span></figure>
-      </div>
-      <div class="info">
-        <h3>Rosto mais definido</h3>
-        <ul class="chips"><li>Cabelo modelado</li><li>Pele mais lisa</li><li>Contorno do rosto</li></ul>
-        <p><b>Antes:</b> cabelo volumoso sem direção, espinhas e marcas visíveis. <b>Depois:</b> corte com forma, pele mais uniforme e mandíbula mais marcada.</p>
-      </div>
-    </article>
-
     <article class="ba">
       <div class="pics">
         <figure><img class="v" src="src/img/antesseco.jpeg" alt="Antes: físico magro" loading="lazy" decoding="async"><span class="tag">Antes</span></figure>
@@ -199,6 +184,30 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <h3>Visual completo</h3>
         <ul class="chips"><li>Cabelo novo</li><li>Sobrancelha</li><li>Rosto definido</li><li>Estilo</li></ul>
         <p><b>Antes:</b> cabelo liso sem estilo, rosto sem definição. <b>Depois:</b> cabelo cacheado curto e modelado, sobrancelha feita e visual de quem se cuida.</p>
+      </div>
+    </article>
+
+    <article class="ba">
+      <div class="pics">
+        <figure><img src="src/img/antesporto.jpeg" alt="Antes: cabelo bagunçado e pele irregular" loading="lazy" decoding="async"><span class="tag">Antes</span></figure>
+        <figure><img class="v" src="src/img/depoisporto.jpeg" alt="Depois: corte alinhado e pele mais uniforme" loading="lazy" decoding="async"><span class="tag on">Depois</span></figure>
+      </div>
+      <div class="info">
+        <h3>Pele + cabelo + sobrancelha</h3>
+        <ul class="chips"><li>Corte de cabelo</li><li>Pele mais uniforme</li><li>Sobrancelha alinhada</li></ul>
+        <p><b>Antes:</b> cabelo sem forma, pele com marcas e oleosidade, sobrancelha sem desenho. <b>Depois:</b> franja alinhada, pele mais limpa e rosto com mais harmonia.</p>
+      </div>
+    </article>
+
+    <article class="ba">
+      <div class="pics">
+        <figure><img src="src/img/antesporto2.jpeg" alt="Antes: cabelo volumoso e pele com marcas" loading="lazy" decoding="async"><span class="tag">Antes</span></figure>
+        <figure><img src="src/img/depoisporto2.jpeg" alt="Depois: cabelo modelado e rosto mais definido" loading="lazy" decoding="async"><span class="tag on">Depois</span></figure>
+      </div>
+      <div class="info">
+        <h3>Rosto mais definido</h3>
+        <ul class="chips"><li>Cabelo modelado</li><li>Pele mais lisa</li><li>Contorno do rosto</li></ul>
+        <p><b>Antes:</b> cabelo volumoso sem direção, espinhas e marcas visíveis. <b>Depois:</b> corte com forma, pele mais uniforme e mandíbula mais marcada.</p>
       </div>
     </article>
   </div>
@@ -275,20 +284,20 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     <div class="eyebrow">A oferta</div>
     <h2 class="title">Tudo isso por menos<br>que uma pizza.</h2>
     <div class="box">
-      <div class="lab">Acesso completo + bônus</div>
-      <div class="old">De R$ 197</div>
-      <div class="price">R$ 27</div>
-      <p class="d">RISE completo + todos os bônus.<br>Você entra sabendo exatamente o que fazer primeiro.</p>
-      <ul>
-        <li>8 módulos completos</li>
-        <li>Checklist de execução diária</li>
-        <li>Guia rápido de visual masculino</li>
-        <li>Protocolo de postura em 7 dias</li>
-        <li>Atualizações futuras inclusas</li>
-        <li>Acesso vitalício</li>
+      <div class="lab">Tudo que você recebe</div>
+      <ul class="stack">
+        <li><span>8 módulos completos<small>Rosto, pele, postura, shape, alimentação, visual, comunicação e confiança, na ordem certa</small></span><s>R$ 117</s></li>
+        <li><span>Checklist de execução diária<small>Você abre e sabe o que fazer hoje</small></span><s>R$ 19</s></li>
+        <li><span>Guia rápido de visual masculino<small>Cabelo, barba e roupa sem complicação</small></span><s>R$ 29</s></li>
+        <li><span>Protocolo de postura em 7 dias<small>Ajustes simples que mudam como você é percebido</small></span><s>R$ 17</s></li>
+        <li><span>Atualizações futuras<small>Novos conteúdos sem pagar a mais</small></span><s>R$ 15</s></li>
       </ul>
-      <p class="note">Menos que uma saída no fim de semana.<br>Mais barato que continuar comprando produto sem direção.</p>
-      <a href="https://pay.cakto.com.br/r7f962r_1123402" class="btn" target="_blank" rel="noopener">Garantir meu acesso por R$ 27</a>
+      <div class="total"><span>Valor total</span><s>R$ 197</s></div>
+      <div class="today">Hoje você paga só</div>
+      <div class="price">R$ 27</div>
+      <p class="d">Pagamento único, acesso vitalício e liberação imediata no seu e-mail.</p>
+      <a href="https://pay.cakto.com.br/r7f962r_1123402" class="btn" target="_blank" rel="noopener">Quero entrar no RISE</a>
+      <p class="note">Garantia de 30 dias. Se não fizer sentido pra você, devolvemos tudo.</p>
     </div>
   </div>
 </section>
@@ -296,10 +305,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 <section class="guar">
   <div class="wrap center" style="max-width:520px">
     <div class="eyebrow">Garantia</div>
-    <h2 class="title">Você tem <span>7 dias</span> pra decidir.</h2>
-    <p class="lede">Entra, vê a estrutura, aplica o que fizer sentido. Se em 7 dias achar que não é pra você, pede o reembolso. Simples assim.</p>
-    <div class="pill"><strong>7 dias</strong> · sem enrolação</div>
-    <div class="cta"><a href="https://pay.cakto.com.br/r7f962r_1123402" class="btn" target="_blank" rel="noopener">Quero entrar com garantia</a></div>
+    <h2 class="title">Você tem <span>30 dias</span> pra decidir.</h2>
+    <p class="lede">Entra, vê a estrutura e aplica o que fizer sentido. Se em 30 dias achar que não é pra você, pede o reembolso e pronto. Sem pergunta, sem burocracia.</p>
+    <div class="pill"><strong>30 dias</strong> de garantia total</div>
+    <div class="cta"><a href="https://pay.cakto.com.br/r7f962r_1123402" class="btn" target="_blank" rel="noopener">Quero testar por 30 dias</a></div>
   </div>
 </section>
 
@@ -308,7 +317,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     <div class="eyebrow">Dúvidas</div>
     <h2 class="title">O que costuma travar a decisão.</h2>
     <div class="faq" id="faqList" style="text-align:left"></div>
-    <div class="cta"><a href="https://pay.cakto.com.br/r7f962r_1123402" class="btn" target="_blank" rel="noopener">Quero meu acesso · R$ 27</a></div>
+    <div class="cta"><a href="https://pay.cakto.com.br/r7f962r_1123402" class="btn" target="_blank" rel="noopener">Quero meu acesso</a></div>
   </div>
 </section>
 
@@ -316,14 +325,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   <div class="wrap center">
     <h2 class="title">Você pode continuar invisível<br>ou pode começar a ser visto.</h2>
     <p class="lede">O RISE existe pra homem que cansou de informação solta e quer uma sequência que realmente muda como ele é percebido.</p>
-    <div class="cta"><a href="https://pay.cakto.com.br/r7f962r_1123402" class="btn" target="_blank" rel="noopener">Quero ser visto · R$ 27</a></div>
-    <p class="fp">Acesso completo + bônus · <strong>R$ 27</strong> · Garantia de 7 dias</p>
+    <div class="cta"><a href="https://pay.cakto.com.br/r7f962r_1123402" class="btn" target="_blank" rel="noopener">Quero ser visto</a></div>
+    <p class="fp">Acesso imediato e <strong>30 dias de garantia</strong></p>
   </div>
 </section>
 
 <footer><div class="wrap"><span>© 2026 RISE</span><nav style="display:flex;gap:20px"><a href="#">Termos</a><a href="#">Privacidade</a></nav></div></footer>
 
-<a href="https://pay.cakto.com.br/r7f962r_1123402" class="sticky" id="sticky" target="_blank" rel="noopener">Garantir acesso · R$ 27</a>
+<a href="https://pay.cakto.com.br/r7f962r_1123402" class="sticky" id="sticky" target="_blank" rel="noopener">Quero meu acesso</a>
 
 <script>
 (function(){
@@ -334,15 +343,20 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     ["Isso muda estrutura óssea?","Não. O módulo deixa claro o que dá pra trabalhar no rosto e o que é perda de tempo. Sem promessa de mudar osso."],
     ["Em quanto tempo vejo diferença?","Algumas mudanças de visual e rotina aparecem rápido. Shape e presença pedem continuidade. Depende de quanto você aplica."],
     ["Preciso já saber de estética ou treino?","Não. Foi feito exatamente pra quem tem informação demais e plano de menos."],
-    ["Vou precisar gastar muito além dos R$27?","Não necessariamente. O foco é escolher melhor, não comprar por impulso."],
+    ["Vou precisar gastar muito além do RISE?","Não necessariamente. O foco é escolher melhor, não comprar por impulso."],
     ["Inclui treino e alimentação?","Sim. Shape e alimentação entram junto com aparência, visual e presença."],
     ["Posso usar pelo celular?","Sim."],
-    ["E se eu não gostar?","Você tem 7 dias. Se achar que não é pra você, pede o reembolso nos termos da garantia."],
+    ["E se eu não gostar?","Você tem 30 dias. Se achar que não é pra você, pede o reembolso e recebe o valor de volta."],
     ["Não recebi o acesso. O que faço?","Olha a caixa de spam e promoções. Se não achar, usa o suporte que aparece depois da compra."]
   ];
   document.getElementById('faqList').innerHTML=faqs.map(function(f){
     return '<details><summary>'+f[0]+'</summary><p>'+f[1]+'</p></details>';
   }).join('');
+
+  // Entrada suave ao rolar
+  var rv=document.querySelectorAll('section .wrap > *:not(.grid):not(.mods):not(.faq),.pc,.mod,.bonus,.faq details');
+  var ro=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  [].forEach.call(rv,function(el,i){el.classList.add('rv');el.style.transitionDelay=(i%4)*60+'ms';ro.observe(el)});
 
   // Carrossel: swipe nativo + setas + bolinhas
   var car=document.getElementById('car'),cards=car.children,dots=document.getElementById('dots');
